@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
         final TextView to = (TextView)findViewById(R.id.to);
         final TextView cc = (TextView)findViewById(R.id.cc);
         final TextView bcc = (TextView)findViewById(R.id.bcc);
-        final TextView subject = (TextView)findViewById(R.id.subjet);
+        final TextView subject = (TextView)findViewById(R.id.subject);
         final TextView body = (TextView)findViewById(R.id.body);
 
         final Intent intent = new Intent(this, ReadEmailActivity.class);
@@ -86,7 +86,7 @@ public class MainActivity extends ActionBarActivity {
         final TextView to = (TextView)findViewById(R.id.to);
         final TextView cc = (TextView)findViewById(R.id.cc);
         final TextView bcc = (TextView)findViewById(R.id.bcc);
-        final TextView subject = (TextView)findViewById(R.id.subjet);
+        final TextView subject = (TextView)findViewById(R.id.subject);
         final TextView body = (TextView)findViewById(R.id.body);
 
         final SharedPreferences sharedPref = this.getPreferences(
@@ -115,7 +115,7 @@ public class MainActivity extends ActionBarActivity {
         final TextView to = (TextView)findViewById(R.id.to);
         final TextView cc = (TextView)findViewById(R.id.cc);
         final TextView bcc = (TextView)findViewById(R.id.bcc);
-        final TextView subject = (TextView)findViewById(R.id.subjet);
+        final TextView subject = (TextView)findViewById(R.id.subject);
         final TextView body = (TextView)findViewById(R.id.body);
 
         from.setText(sharedPref.getString("from",""));

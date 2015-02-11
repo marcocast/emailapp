@@ -1,7 +1,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff8dcff"
+    android:clickable="true">
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +19,8 @@
             android:text="@string/title"
             android:id="@+id/title"
             android:textStyle="bold"
-            android:textSize="50dp" />
+            android:textSize="50dp"
+            android:textColor="#ff6eff1d" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -25,7 +28,24 @@
             android:text="@string/description"
             android:id="@+id/description"
             android:textStyle="bold"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textColor="#ffff1119" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/from_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/from"
+            android:nextFocusDown="@+id/to"
+            android:singleLine ="true"
+            android:layout_weight="0"
+            android:textColorHint="#ff2c8aff"
+            android:textIsSelectable="false" />
 
         <View
             android:layout_width="fill_parent"
@@ -41,6 +61,22 @@
             android:singleLine ="true"
             android:layout_weight="0"/>
 
+
+        <TextView
+            android:id="@+id/to_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/to"
+            android:nextFocusDown="@+id/cc"
+            android:singleLine ="true"
+            android:layout_weight="0"
+            android:textColorHint="#ff2c8aff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
         <EditText
             android:id="@+id/to"
             android:layout_width="fill_parent"
@@ -50,26 +86,78 @@
             android:singleLine ="true"
             android:layout_weight="0"/>
 
-        <EditText
-            android:id="@+id/cc"
+
+
+        <TextView
+            android:id="@+id/cc_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/cc"
             android:nextFocusDown="@+id/subjet"
             android:singleLine ="true"
+            android:layout_weight="0"
+            android:textColorHint="#ff2c8aff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/cc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cc"
+            android:nextFocusDown="@+id/bcc"
+            android:singleLine ="true"
             android:layout_weight="0"/>
+
+
+
+
+        <TextView
+            android:id="@+id/bcc_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bcc"
+            android:nextFocusDown="@+id/subject"
+            android:singleLine ="true"
+            android:layout_weight="0"
+            android:textColorHint="#ff2c8aff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 
         <EditText
             android:id="@+id/bcc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/bcc"
-            android:nextFocusDown="@+id/subjet"
+            android:nextFocusDown="@+id/subject"
             android:singleLine ="true"
             android:layout_weight="0"/>
 
+
+
+        <TextView
+            android:id="@+id/subject_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/subject"
+            android:singleLine ="true"
+            android:layout_weight="0"
+            android:textColorHint="#ff2c8aff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+
         <EditText
-            android:id="@+id/subjet"
+            android:id="@+id/subject"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/subject"
@@ -78,6 +166,27 @@
             android:layout_weight="0"/>
 
 
+
+
+        <TextView
+            android:id="@+id/body_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine ="true"
+            android:hint="@string/body"
+            android:layout_weight="0"
+            android:textColorHint="#ff2c8aff" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
         <EditText
             android:id="@+id/body"
             android:layout_width="fill_parent"
@@ -86,6 +195,8 @@
             android:nextFocusDown="@+id/send_button"
             android:singleLine ="false"
             android:layout_weight="0.41"/>
+
+        </ScrollView>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"

@@ -21,12 +21,10 @@ public class ReadEmailActivity extends ActionBarActivity {
         Intent intent = getIntent();
 
 
-
-
         final TextView from = (TextView)findViewById(R.id.from);
         final TextView to = (TextView)findViewById(R.id.to);
         final TextView cc = (TextView)findViewById(R.id.cc);
-        final TextView subject = (TextView)findViewById(R.id.subjet);
+        final TextView subject = (TextView)findViewById(R.id.subject);
         final TextView body = (TextView)findViewById(R.id.body);
 
 
@@ -37,10 +35,6 @@ public class ReadEmailActivity extends ActionBarActivity {
         subject.setText(intent.getStringExtra(MainActivity.EXTRA_SUBJECT));
         body.setText(intent.getStringExtra(MainActivity.EXTRA_BODY));
     }
-
-
-
-
 
 
 
