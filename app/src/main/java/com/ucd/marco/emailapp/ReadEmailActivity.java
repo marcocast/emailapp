@@ -18,9 +18,6 @@ public class ReadEmailActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_email);
 
-        final SharedPreferences sharedPref = this.getPreferences(
-                Context.MODE_PRIVATE);
-
         Intent intent = getIntent();
 
 
@@ -32,11 +29,13 @@ public class ReadEmailActivity extends ActionBarActivity {
         final TextView subject = (TextView)findViewById(R.id.subjet);
         final TextView body = (TextView)findViewById(R.id.body);
 
-        from.setText(sharedPref.getString("from",""));
-        to.setText(sharedPref.getString("to",""));
-        cc.setText(sharedPref.getString("cc",""));
-        subject.setText(sharedPref.getString("subject",""));
-        body.setText(sharedPref.getString("body",""));
+
+
+        from.setText(intent.getStringExtra(MainActivity.EXTRA_FROM));
+        to.setText(intent.getStringExtra(MainActivity.EXTRA_TO));
+        cc.setText(intent.getStringExtra(MainActivity.EXTRA_CC));
+        subject.setText(intent.getStringExtra(MainActivity.EXTRA_SUBJECT));
+        body.setText(intent.getStringExtra(MainActivity.EXTRA_BODY));
     }
 
 
@@ -50,18 +49,4 @@ public class ReadEmailActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

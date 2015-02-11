@@ -14,6 +14,13 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    public final static String EXTRA_FROM = "com.ucd.marco.emailapp.FROM";
+    public final static String EXTRA_TO = "com.ucd.marco.emailapp.TO";
+    public final static String EXTRA_CC = "com.ucd.marco.emailapp.CC";
+    public final static String EXTRA_SUBJECT = "com.ucd.marco.emailapp.SUBJECT";
+    public final static String EXTRA_BODY = "com.ucd.marco.emailapp.BODY";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +62,11 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
+                intent.putExtra(EXTRA_FROM, from.getText().toString());
+                intent.putExtra(EXTRA_TO, to.getText().toString());
+                intent.putExtra(EXTRA_CC, cc.getText().toString());
+                intent.putExtra(EXTRA_SUBJECT, subject.getText().toString());
+                intent.putExtra(EXTRA_BODY, body.getText().toString());
                 startActivity(intent);
 
             }
@@ -116,13 +128,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
 
 }
