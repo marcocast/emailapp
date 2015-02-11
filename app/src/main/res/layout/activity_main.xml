@@ -1,0 +1,115 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:id="@+id/main">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:textSize="50dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:id="@+id/description"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/from"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/from"
+            android:nextFocusDown="@+id/to"
+            android:singleLine ="true"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/to"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/to"
+            android:nextFocusDown="@+id/cc"
+            android:singleLine ="true"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/cc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cc"
+            android:nextFocusDown="@+id/subjet"
+            android:singleLine ="true"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/bcc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bcc"
+            android:nextFocusDown="@+id/subjet"
+            android:singleLine ="true"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/subjet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/subject"
+            android:nextFocusDown="@+id/body"
+            android:singleLine ="true"
+            android:layout_weight="0"/>
+
+
+        <EditText
+            android:id="@+id/body"
+            android:layout_width="fill_parent"
+            android:layout_height="269dp"
+            android:hint="@string/body"
+            android:nextFocusDown="@+id/send_button"
+            android:singleLine ="false"
+            android:layout_weight="0.41"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:context=".MainActivity"
+            android:id="@+id/buttons">
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_send"
+                android:onClick="sendMessage"/>
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_clear"
+                android:onClick="clearForm"/>
+        </LinearLayout>
+
+
+
+    </TableLayout>
+</ScrollView>
