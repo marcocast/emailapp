@@ -16,5 +16,11 @@
     <string name="button_back">Back</string>
     <string name="email_data_file_key">email_data_file_key</string>
     <string name="title_activity_read_email">ReadEmail</string>
+    <string name="invalid_from_email">Invalid from email address</string>
+    <string name="invalid_to_email">Invalid to email address</string>
+    <string name="invalid_cc_email">Invalid cc email address</string>
+    <string name="invalid_bcc_email">Invalid bcc email address</string>
+    <string name="invalid_subject">Subject cannot be empty</string>
+    <string name="invalid_body">Body cannot be empty</string>
 
 </resources>

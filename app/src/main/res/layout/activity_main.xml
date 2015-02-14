@@ -59,7 +59,8 @@
             android:hint="@string/from"
             android:nextFocusDown="@+id/to"
             android:singleLine ="true"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:inputType="textEmailAddress" />
 
 
         <TextView
@@ -84,7 +85,8 @@
             android:hint="@string/to"
             android:nextFocusDown="@+id/cc"
             android:singleLine ="true"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:inputType="textEmailAddress" />
 
 
 
@@ -110,7 +112,8 @@
             android:hint="@string/cc"
             android:nextFocusDown="@+id/bcc"
             android:singleLine ="true"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:inputType="textEmailAddress" />
 
 
 
@@ -137,7 +140,8 @@
             android:hint="@string/bcc"
             android:nextFocusDown="@+id/subject"
             android:singleLine ="true"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:inputType="textEmailAddress" />
 
 
 
@@ -163,7 +167,8 @@
             android:hint="@string/subject"
             android:nextFocusDown="@+id/body"
             android:singleLine ="true"
-            android:layout_weight="0"/>
+            android:layout_weight="0"
+            android:inputType="textShortMessage" />
 
 
 
@@ -183,10 +188,7 @@
             android:background="@android:color/darker_gray"/>
 
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent">
+
         <EditText
             android:id="@+id/body"
             android:layout_width="fill_parent"
@@ -194,9 +196,10 @@
             android:hint="@string/body"
             android:nextFocusDown="@+id/send_button"
             android:singleLine ="false"
-            android:layout_weight="0.41"/>
+            android:layout_weight="0.41"
+            android:inputType="textLongMessage|textMultiLine" />
 
-        </ScrollView>
+       
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
